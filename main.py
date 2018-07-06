@@ -26,4 +26,4 @@ def predict():
 	return jsonify({'prediction': str(preds)})
 
 if __name__ == '__main__':
-    app.run() ## Removed Port
+    app.run() ## Removed Por
