@@ -7,12 +7,10 @@ from flask import Flask, request, jsonify
 app = Flask(__name__)
 
 
-with open('C:/Users/phsivale/Documents/Trainings/flaskPOC/bin31May.pkl', 'rb') as file:
+with open('bin31May.pkl', 'rb') as file:
 	binz = pickle.load(file)
-with open('C:/Users/phsivale/Documents/Trainings/flaskPOC/model31May.pkl', 'rb') as file:
+with open('model31May.pkl', 'rb') as file:
 	clf = pickle.load(file)
-#binz = joblib.load('C:/Users/phsivale/Documents/Trainings/flaskPOC/bin29March.pkl')
-#clf = joblib.load('C:/Users/phsivale/Documents/Trainings/flaskPOC/model29March.pkl')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -30,5 +28,3 @@ def predict():
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
-
-
